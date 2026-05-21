@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_profile"
+        android:title="Mi Perfil"
+        android:icon="@drawable/ic_person"/>
+    <item
+        android:id="@+id/nav_add_song"
+        android:title="Agregar Canción"
+        android:icon="@drawable/ic_add"/>
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Cerrar Sesión"
+        android:icon="@drawable/ic_logout"/>
+</menu>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MusicPlayer</string>
+    <string name="app_subtitle">Tu música, donde quieras</string>
+    <string name="app_icon">Icono de la aplicación</string>
+    <string name="email_hint">Correo electrónico</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="login_button">Iniciar Sesión</string>
+    <string name="register_text">¿No tienes cuenta? Regístrate</string>
+</resources>
