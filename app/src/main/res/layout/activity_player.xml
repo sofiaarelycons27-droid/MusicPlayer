@@ -6,28 +6,29 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="24dp"
-    android:background="@color/background">
+    android:background="#757575">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@android:color/transparent"
+        app:navigationIcon="@drawable/ic_arrow_back"
         app:title="Reproduciendo ahora"
-        app:titleTextColor="@color/primary"
-        app:navigationIcon="@drawable/ic_back"/>
+        app:titleTextColor="#FFFFFF" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
 
-    <!-- Artwork animado -->
+    <!-- Artwork con icono musical -->
     <androidx.cardview.widget.CardView
         android:layout_width="250dp"
         android:layout_height="250dp"
         app:cardCornerRadius="125dp"
-        app:cardElevation="12dp">
+        app:cardElevation="12dp"
+        app:cardBackgroundColor="#424242">
 
         <ImageView
             android:id="@+id/ivArtwork"
@@ -36,39 +37,28 @@
             android:src="@drawable/ic_music_note"
             android:scaleType="center"
             android:padding="50dp"
-            android:background="@drawable/gradient_music"/>
+            android:tint="#FFFFFF"/>
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Título"
+        android:text="Título de la canción"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginTop="32dp"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"/>
 
     <TextView
         android:id="@+id/tvArtist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Artista"
+        android:text="Nombre del artista"
         android:textSize="18sp"
-        android:textColor="@color/secondary"
+        android:textColor="#E0E0E0"
         android:layout_marginTop="8dp"/>
-
-    <TextView
-        android:id="@+id/tvGenre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Género"
-        android:textSize="12sp"
-        android:background="@drawable/bg_genre_chip"
-        android:padding="6dp"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:layout_marginTop="16dp"/>
 
     <!-- Barra de progreso -->
     <LinearLayout
@@ -81,19 +71,22 @@
             android:id="@+id/sbProgress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:progressTint="@color/primary"/>
+            android:progressTint="#6200EE"
+            android:progressBackgroundTint="#BDBDBD"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
 
             <TextView
                 android:id="@+id/tvCurrentTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0:00"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"/>
 
             <View
                 android:layout_width="0dp"
@@ -104,12 +97,13 @@
                 android:id="@+id/tvTotalTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0:00"
-                android:textSize="12sp"/>
+                android:text="3:45"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"/>
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Controles -->
+    <!-- Controles con iconos -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -121,25 +115,28 @@
             android:id="@+id/btnPrevious"
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:src="@drawable/ic_previous"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            android:src="@drawable/ic_skip_previous"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="#FFFFFF"/>
 
         <ImageButton
             android:id="@+id/btnPlayPause"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/ic_play"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            android:src="@drawable/ic_play_arrow"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="#FFFFFF"/>
 
         <ImageButton
             android:id="@+id/btnNext"
             android:layout_width="56dp"
             android:layout_height="56dp"
-            android:src="@drawable/ic_next"
-            android:background="?attr/selectableItemBackgroundBorderless"/>
+            android:src="@drawable/ic_skip_next"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="#FFFFFF"/>
     </LinearLayout>
 
-    <!-- Control de volumen -->
+    <!-- Control de volumen con iconos -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -152,7 +149,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_volume_off"
-            android:tint="@color/secondary"/>
+            android:tint="#FFFFFF"/>
 
         <SeekBar
             android:id="@+id/sbVolume"
@@ -161,13 +158,15 @@
             android:layout_weight="1"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:progress="50"/>
+            android:progress="50"
+            android:progressTint="#6200EE"
+            android:progressBackgroundTint="#BDBDBD"/>
 
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_volume_up"
-            android:tint="@color/secondary"/>
+            android:tint="#FFFFFF"/>
     </LinearLayout>
 
     <View
