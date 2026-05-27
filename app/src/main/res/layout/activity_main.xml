@@ -19,7 +19,7 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
         <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent">
 
             <LinearLayout
@@ -32,8 +32,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="16dp">
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -47,47 +47,47 @@
                             android:layout_height="wrap_content"
                             android:text="Hola, Usuario"
                             android:textSize="20sp"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Tu biblioteca musical"
-                            android:textSize="12sp"
-                            android:textColor="@color/secondary"/>
+                            android:textColor="@color/secondary"
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <ImageButton
                         android:id="@+id/btnMenu"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/ic_menu"
-                        android:background="?attr/selectableItemBackgroundBorderless"/>
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_menu" />
                 </LinearLayout>
 
                 <!-- Barra de búsqueda -->
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    app:endIconMode="clear_text"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    app:endIconMode="clear_text">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etSearch"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Buscar canción o artista"
-                        android:inputType="text"/>
+                        android:inputType="text" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <!-- Filtro de género -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
                     android:text="Filtrar por género"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="8dp"/>
+                    android:textStyle="bold" />
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
@@ -99,14 +99,14 @@
                         android:id="@+id/genreContainer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"/>
+                        android:orientation="horizontal" />
                 </HorizontalScrollView>
 
                 <!-- Lista de canciones -->
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvSongs"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
